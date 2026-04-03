@@ -35,3 +35,37 @@
     font-family: 'JetBrains Mono', monospace; /* Aplicación de fuente seleccionada */
     margin-bottom: 1rem;
 }
+
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.footer-contenido p {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Personalización de enlaces y transiciones - Requerimientos CSS 3 y 4 */
+.link-footer {
+    color: #aaa;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85rem;
+    transition: color 0.3s ease, transform 0.2s ease; /* Transición obligatoria */
+}
+
+.link-footer:hover {
+    color: #fff;
+    transform: scale(1.1); /* Pequeña animación al pasar el mouse */
+}

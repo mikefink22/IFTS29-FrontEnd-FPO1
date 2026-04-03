@@ -11,6 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 </head>
 
@@ -180,10 +181,57 @@
 
         </section>
 
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form action="#" method="post" class="formulario-contacto">
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
 
+                <div class="campo">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="campo">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono">
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar Mensaje</button>
+            </form>
+        </section>
 
     </main>
-    <footer></footer>
+    <footer id="footer">
+        <div class="footer-contenido">
+            <div class="redes-sociales">
+                <a href="https://github.com/mikefink22" target="_blank" class="link-footer" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/miguel-flores-3211b398/" target="_blank" class="link-footer"
+                    aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="#contacto" class="link-footer" aria-label="Ir al formulario de contacto">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+
+            <p>&copy; <span id="year"></span> Mike - Córdoba, Argentina.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
 </body>
 
 </html>
