@@ -5,7 +5,7 @@
 Este proyecto es la **Práctica Formativa Obligatoria 1 (PFO1)** de la materia Desarrollo Web. Consiste en una landing page de portafolio personal desarrollada únicamente con HTML5 y CSS3, sin frameworks ni librerías externas. El sitio presenta información personal, proyectos destacados, habilidades técnicas, películas favoritas y un formulario de contacto, aplicando buenas prácticas de maquetado semántico, diseño responsivo y accesibilidad.
 
 - 🌐 **GitHub Pages:** [Ver Sitio Publicado](https://mikefink22.github.io/IFTS29-FrontEnd-FPO1/)
-- 🚀 **Vercel:** [_Ver Sitio Publicado](https://portafoliomike.vercel.app/)
+- 🚀 **Vercel:** [Ver Sitio Publicado](https://portafoliomike.vercel.app/)
 
 ---
 
