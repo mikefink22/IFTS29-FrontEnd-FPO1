@@ -35,6 +35,10 @@ section {
     padding: 4rem 10%;
 }
 
+section h2 {
+    text-align: center;
+}
+
 /* --- HEADER Y NAVEGACIÓN --- */
 header {
     background-color: var(--primario);
@@ -90,6 +94,8 @@ nav ul li a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    align-items: stretch; /* todas las tarjetas a la misma altura */
+    grid-auto-rows: 1fr;  /* iguala la altura de todas las filas */
 }
 
 .tarjeta {
@@ -104,12 +110,13 @@ nav ul li a:hover {
 }
 
 .tarjeta:hover {
-    transform: translateY(-10px);
+    transform: none;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
 }
 
 .tarjeta img {
     width: 100%;
-    height: 200px;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
 }
 
@@ -120,10 +127,18 @@ nav ul li a:hover {
     flex-direction: column;
 }
 
+/* h3 más chico dentro de tarjetas */
+.tarjeta-contenido h3 {
+    font-size: 0.95rem;
+    text-align: center;
+}
+
 .tarjeta-contenido p {
     font-size: 0.9rem;
     margin-bottom: 1.5rem;
     flex-grow: 1;
+    max-height: 120px;
+    overflow-y: auto;
 }
 
 /* Botones personalizados (Requerimiento CSS 3 y 4) */
@@ -150,6 +165,8 @@ nav ul li a:hover {
 /* --- TABLA (Efecto Zebra y Bordes Finos) --- */
 table {
     width: 100%;
+    margin: 0 auto;
+    max-width: 800px;
     border-collapse: collapse;
     margin-top: 2rem;
     background-color: var(--blanco);
@@ -233,7 +250,8 @@ input[name="slider"] {
 
 .pelicula-item {
     background: var(--blanco);
-    margin-bottom: 2rem;
+    margin: 0 auto 2rem auto; /* centrar div */
+    max-width: 800px;           /* ← iguala el ancho al slider */
     border-radius: 8px;
     padding: 2rem;
     box-shadow: var(--sombra);
@@ -242,7 +260,10 @@ input[name="slider"] {
 
 .pelicula-item img {
     max-width: 300px;
+    height: 420px;
+    object-fit: cover; /* elimina fondos blancos, recorta al tamaño del póster */
     border-radius: 4px;
+    margin: 1rem 0;
 }
 
 /* --- FORMULARIO --- */
@@ -294,6 +315,7 @@ footer {
     font-size: 1.5rem;
     margin: 0 1rem;
     transition: var(--transicion);
+    display: inline-block; /* necesario para que funcione translateY */
 }
 
 .link-footer:hover {
@@ -306,4 +328,13 @@ footer {
     section { padding: 2rem 5%; }
     .contenedor-grid { grid-template-columns: 1fr; }
     .slide img { height: 300px; }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    .contenedor-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 700px;
+        margin: 0 auto;
+        align-items: start; /* cada tarjeta toma su altura natural */
+    }
 }
