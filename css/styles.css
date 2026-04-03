@@ -23,20 +23,19 @@ body {
     line-height: 1.6;
     background-color: var(--fondo);
     color: var(--primario);
+    min-width:320px;
 }
 
 h1, h2, h3 {
     font-family: 'JetBrains Mono', monospace;
     text-transform: uppercase;
     margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 section {
-    padding: 4rem 10%;
-}
-
-section h2 {
-    text-align: center;
+    padding: 2rem 5%;
+     scroll-margin-top: 60px; /* altura aproximada del nav */
 }
 
 /* --- HEADER Y NAVEGACIÓN --- */
@@ -92,13 +91,14 @@ nav ul li a:hover {
 /* --- GRILLA DE PROYECTOS --- */
 .contenedor-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    align-items: stretch; /* todas las tarjetas a la misma altura */
-    grid-auto-rows: 1fr;  /* iguala la altura de todas las filas */
+    align-items: stretch;
+    grid-auto-rows: 1fr;
 }
 
 .tarjeta {
+    padding: 0.75rem;
     background: var(--blanco);
     border-radius: 8px;
     overflow: hidden;
@@ -106,7 +106,7 @@ nav ul li a:hover {
     transition: var(--transicion);
     display: flex;
     flex-direction: column;
-    height: 100%; /* Asegura que todas midan lo mismo */
+    height: 100%;
 }
 
 .tarjeta:hover {
@@ -122,29 +122,22 @@ nav ul li a:hover {
 
 .tarjeta-contenido {
     padding: 1.5rem;
-    flex-grow: 1; /* Empuja el contenido para igualar alturas */
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
 
-/* h3 más chico dentro de tarjetas */
-.tarjeta-contenido h3 {
-    font-size: 0.95rem;
-    text-align: center;
-}
-
-.tarjeta-contenido p {
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
+.tarjeta-texto {
     flex-grow: 1;
-    max-height: 120px;
     overflow-y: auto;
+    margin-bottom: 1.5rem;
+    max-height: 150px;
 }
 
-/* Botones personalizados (Requerimiento CSS 3 y 4) */
 .btn-repo, .btn-proyecto, .btn-submit {
     display: inline-block;
     padding: 0.8rem 1.5rem;
+    margin-top: auto;
     background-color: var(--primario);
     color: var(--blanco);
     text-decoration: none;
@@ -167,8 +160,7 @@ table {
     width: 100%;
     margin: 0 auto;
     max-width: 800px;
-    border-collapse: collapse;
-    margin-top: 2rem;
+    border-collapse: collapse;    
     background-color: var(--blanco);
     box-shadow: var(--sombra);
 }
@@ -189,17 +181,22 @@ tr:nth-child(even) {
     background-color: #f9f9f9; /* Efecto Zebra */
 }
 
-/* --- SLIDER (Películas) --- */
+/* --- (GRID - Películas) --- */
+.contenedor-peliculas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: start;
+}
+
+/* --- SLIDER --- */
 .slider-container {
-    max-width: 800px;
-    margin: 0 auto 3rem auto;
+    max-width: 100%;
     overflow: hidden;
     position: relative;
 }
 
-input[name="slider"] {
-    display: none;
-}
+input[name="slider"] { display: none; }
 
 .slider-content {
     display: flex;
@@ -220,7 +217,6 @@ input[name="slider"] {
     margin: 1rem 0;
 }
 
-/* Lógica de navegación del slider */
 #s1:checked ~ .slider-content { transform: translateX(0%); }
 #s2:checked ~ .slider-content { transform: translateX(-33.33%); }
 #s3:checked ~ .slider-content { transform: translateX(-66.66%); }
@@ -248,23 +244,33 @@ input[name="slider"] {
     transform: scale(1.3);
 }
 
+/* --- PELÍCULAS --- */
 .pelicula-item {
     background: var(--blanco);
-    margin: 0 auto 2rem auto; /* centrar div */
-    max-width: 800px;           /* ← iguala el ancho al slider */
     border-radius: 8px;
     padding: 2rem;
+    max-width: 800px;    
     box-shadow: var(--sombra);
     text-align: center;
+    margin:0 auto 2rem auto;
 }
 
 .pelicula-item img {
     max-width: 300px;
     height: 420px;
-    object-fit: cover; /* elimina fondos blancos, recorta al tamaño del póster */
+    object-fit: cover;
     border-radius: 4px;
     margin: 1rem 0;
 }
+
+.contenedor-peliculas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 
 /* --- FORMULARIO --- */
 .formulario-contacto {
@@ -324,17 +330,21 @@ footer {
 }
 
 /* --- RESPONSIVE --- */
-@media (max-width: 768px) {
-    section { padding: 2rem 5%; }
-    .contenedor-grid { grid-template-columns: 1fr; }
-    .slide img { height: 300px; }
-}
-
-@media (min-width: 480px) and (max-width: 768px) {
+@media (max-width: 1200px) {
     .contenedor-grid {
         grid-template-columns: repeat(2, 1fr);
-        max-width: 700px;
-        margin: 0 auto;
-        align-items: start; /* cada tarjeta toma su altura natural */
     }
+    .contenedor-peliculas {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    section { padding: 2rem 5%; }
+    .contenedor-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+    .contenedor-peliculas { grid-template-columns: 1fr; }
+    .slide img { height: 300px; }
 }
