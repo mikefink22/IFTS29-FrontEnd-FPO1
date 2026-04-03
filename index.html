@@ -54,11 +54,11 @@
                         alt="Captura de pantalla de la página de inicio de ClinicFlow, sistema de gestión médica">
                     <div class="tarjeta-contenido">
                         <h3>ClinicFlow</h3>
-                        <p>es una plataforma web moderna y segura desarrollada para la comercialización de planes de
-                            suscripción del sistema de gestión de pacientes ClinicFlow. Su objetivo principal es
-                            facilitar la adquisición del software mediante una experiencia de compra en línea intuitiva,
-                            eficiente y confiable para clientes potenciales (clínicas, hospitales, consultorios), así
-                            como proporcionar un panel de administración para la gestión de productos y ventas.</p>
+                        <div class="tarjeta-texto">
+                            <p>Plataforma web para la comercialización de planes de suscripción de ClinicFlow, un
+                                sistema de gestión de pacientes.</p>
+                        </div>
+
                         <a href="https://ispc-web-2025.github.io/ClinicFlow/front" class="btn-repo"
                             target="_blank">Visitar Sitio</a>
                     </div>
@@ -69,10 +69,13 @@
                         alt="Interfaz de la aplicación móvil de gestión de clubes deportivos desarrollada en Kotlin">
                     <div class="tarjeta-contenido">
                         <h3>Gestión de Club Deportivo</h3>
-                        <p>Aplicación móvil robusta creada con Kotlin para la administración de socios, actividades y
-                            pagos en un Club Deportivo.</p>
-                        <a href="https://github.com/IFTS29/ClubDeportivo-Mobile" class="btn-repo" target="_blank">Ver
-                            Proyecto en GitHub</a>
+                        <div class="tarjeta-texto">
+                            <p>Aplicación móvil robusta creada con Kotlin para la administración de socios, actividades
+                                y pagos en un Club Deportivo.</p>
+                        </div>
+
+                        <a href="https://github.com/IFTS29/ClubDeportivo-Mobile" class="btn-repo" target="_blank">Ver en
+                            GitHub</a>
                     </div>
                 </article>
 
@@ -80,14 +83,33 @@
                     <img src="img/clinicflow-wp.png"
                         alt="Captura de pantalla del sitio web ClinicFlow desarrollado en WordPress">
                     <div class="tarjeta-contenido">
-                        <h3>Sistemas de Gestión: ClinicFlow</h3>
-                        <p>Diseño y desarrollo de un sitio institucional para una empresa de software médico, utilizando
-                            WordPress para la gestión de contenidos y presentación de servicios profesionales.</p>
-
+                        <h3>SGC: ClinicFlow</h3>
+                        <div class="tarjeta-texto">
+                            <p>Diseño y desarrollo de un sitio institucional para una empresa de software médico,
+                                utilizando WordPress para la gestión de contenidos y presentación de servicios
+                                profesionales.</p>
+                        </div>
                         <a href="https://clinicflow.com.ar/" class="btn-proyecto" target="_blank">Visitar Sitio</a>
                     </div>
                 </article>
+
+                <article class="tarjeta">
+                    <img src="img/busqueda-web-edge.png"
+                        alt="Captura del script BusquedaWebEdge corriendo en terminal junto a Microsoft Edge realizando búsquedas automáticas">
+                    <div class="tarjeta-contenido">
+                        <h3>Automatización Web con Python</h3>
+                        <div class="tarjeta-texto">
+                            <p>Script de automatización en Python que valida flujos de navegación y búsqueda en
+                                Microsoft Edge utilizando la API de Wikipedia. Simula búsquedas reales con tiempos de
+                                espera
+                                aleatorios.</p>
+                        </div>
+                        <a href="https://github.com/mikefink22/busquedaWebEdge" class="btn-repo" target="_blank">Ver en
+                            GitHub</a>
+                    </div>
+                </article>
             </div>
+
         </section>
 
         <section id="habilidades">
@@ -120,74 +142,69 @@
             </table>
         </section>
 
-
         <section id="peliculas">
-            <!-- SECCIÓN PELÍCULAS: Lista de las mejores películas según criterio personal.
-             Incluye un slider CSS puro para las tres partes de El Señor de los Anillos.
-             Mejora futura: agregar puntaje con estrellas y un sistema de votación interactivo con JS. -->
+            <!-- SECCIÓN PELÍCULAS -->
             <h2>Las Mejores Películas de la Historia</h2>
-            <article class="tarjeta slider-container">
-                <input type="radio" name="slider" id="s1" checked>
-                <input type="radio" name="slider" id="s2">
-                <input type="radio" name="slider" id="s3">
-
-                <div class="slider-content">
-                    <div class="slide">
-                        <h3>El Señor de los Anillos: La Comunidad del Anillo</h3>
-                        <img src="img/lotr-1.jpg"
-                            alt="Póster de La Comunidad del Anillo con Frodo y los miembros de la Compañía.">
-                        <p class="comentario-peli">La misión de Frodo y la Compañía para destruir el Anillo Único en el
-                            Monte del Destino. Una epopeya sobre la resistencia ante la corrupción y la lucha definitiva
-                            contra el Señor Oscuro Sauron.</p>
-                    </div>
-
-                    <div class="slide">
-                        <h3>El Señor de los Anillos: Las Dos Torres</h3>
-                        <img src="img/lotr-2.jpg"
-                            alt="Póster de Las Dos Torres con la torre de Orthanc, Aragorn, Gandalf y Frodo.">
-                        <p class="comentario-peli">Con la Comunidad fragmentada, Frodo y Sam avanzan hacia Mordor
-                            guiados por el volátil Gollum. Mientras tanto, Aragorn y sus aliados atraviesan la Tierra
-                            Media para enfrentar las fuerzas de Saruman.</p>
-                    </div>
-
-                    <div class="slide">
-                        <h3>El Señor de los Anillos: El Retorno del Rey</h3>
-                        <img src="img/lotr-3.jpg"
-                            alt="Póster de El Retorno del Rey con Aragorn empuñando su espada y Frodo.">
-                        <p class="comentario-peli">La batalla final por la Tierra Media comienza en Minas Tirith.
-                            Mientras Aragorn reclama su destino como rey para liderar a Gondor, Frodo y Sam alcanzan los
-                            límites de su resistencia en las entrañas de Mordor.</p>
-                    </div>
-                </div>
-
-                <div class="slider-controls">
-                    <label for="s1"></label>
-                    <label for="s2"></label>
-                    <label for="s3"></label>
-                </div>
-            </article>
 
             <article class="pelicula-item">
-                <h3>The Matrix</h3>
-                <img src="img/matrix.webp"
-                    alt="Neo frente a una lluvia de código verde digital, representando la simulación de la Matrix.">
-                <p class="comentario-peli">
-                    Neo, un hacker atrapado en una realidad simulada, debe elegir entre la ignorancia de su vida
-                    anterior o unirse a la resistencia liderada por Morfeo. Una obra fundamental que explora la dualidad
-                    entre el mundo digital y la libertad humana.
-                </p>
+                <h3>Trilogía: El Señor de los Anillos</h3>
+                <div class="slider-container">
+                    <input type="radio" name="slider" id="s1" checked>
+                    <input type="radio" name="slider" id="s2">
+                    <input type="radio" name="slider" id="s3">
+                    <div class="slider-content">
+                        <div class="slide">
+                            <h4>La Comunidad del Anillo</h4>
+                            <img src="img/lotr-1.jpg"
+                                alt="Póster de La Comunidad del Anillo con Frodo y los miembros de la Compañía.">
+                            <p class="comentario-peli">La misión de Frodo y la Compañía para destruir el Anillo Único en
+                                el Monte del Destino. Una epopeya sobre la resistencia ante la corrupción y la lucha
+                                definitiva contra el Señor Oscuro Sauron.</p>
+                        </div>
+                        <div class="slide">
+                            <h4>Las Dos Torres</h4>
+                            <img src="img/lotr-2.jpg"
+                                alt="Póster de Las Dos Torres con la torre de Orthanc, Aragorn, Gandalf y Frodo.">
+                            <p class="comentario-peli">Con la Comunidad fragmentada, Frodo y Sam avanzan hacia Mordor
+                                guiados por el volátil Gollum. Mientras tanto, Aragorn y sus aliados atraviesan la
+                                Tierra Media para enfrentar las fuerzas de Saruman.</p>
+                        </div>
+                        <div class="slide">
+                            <h4>El Retorno del Rey</h4>
+                            <img src="img/lotr-3.jpg"
+                                alt="Póster de El Retorno del Rey con Aragorn empuñando su espada y Frodo.">
+                            <p class="comentario-peli">La batalla final por la Tierra Media comienza en Minas Tirith.
+                                Mientras Aragorn reclama su destino como rey para liderar a Gondor, Frodo y Sam alcanzan
+                                los límites de su resistencia en las entrañas de Mordor.</p>
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <label for="s1"></label>
+                        <label for="s2"></label>
+                        <label for="s3"></label>
+                    </div>
+                </div>
             </article>
 
-            <article class="pelicula-item">
-                <h3>Milagros Inesperados</h3>
-                <img src="img/la-milla-verde.jpg"
-                    alt="Póster de La Milla Verde con un primer plano de Tom Hanks como Paul Edgecomb.">
-                <p class="comentario-peli">Ambientada en la Gran Depresión, narra la vida de un guardia de prisión que
-                    descubre que un condenado a muerte posee dones mágicos. Una historia profunda sobre la injusticia y
-                    la empatía.</p>
-            </article>
+            <div class="contenedor-peliculas">
+                <article class="pelicula-item">
+                    <h3>The Matrix</h3>
+                    <img src="img/matrix.webp" alt="Neo frente a una lluvia de código verde digital.">
+                    <p class="comentario-peli">Neo, un hacker atrapado en una realidad simulada, debe elegir entre la
+                        ignorancia de su vida anterior o unirse a la resistencia liderada por Morfeo. Una obra
+                        fundamental que explora la dualidad entre el mundo digital y la libertad humana.</p>
+                </article>
 
+                <article class="pelicula-item">
+                    <h3>Milagros Inesperados</h3>
+                    <img src="img/la-milla-verde.jpg" alt="Póster de La Milla Verde con Tom Hanks como Paul Edgecomb.">
+                    <p class="comentario-peli">Ambientada en la Gran Depresión, narra la vida de un guardia de prisión
+                        que descubre que un condenado a muerte posee dones mágicos. Una historia profunda sobre la
+                        injusticia y la empatía.</p>
+                </article>
+            </div>
         </section>
+
 
         <section id="contacto">
             <h2>Contacto</h2>
