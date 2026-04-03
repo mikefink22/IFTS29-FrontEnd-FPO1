@@ -190,6 +190,23 @@ nav ul li a:hover {
     transition: var(--transicion);
 }
 
+.habilidad-categoria {
+    transition: var(--transicion);
+}
+
+.habilidad-categoria:hover {
+    transform: translateY(-4px);
+}
+
+.habilidad-categoria.tecnico:hover    { border-top-color: #00d4ff; }
+.habilidad-categoria.datos:hover      { border-top-color: #00c896; }
+.habilidad-categoria.aprendizaje:hover { border-top-color: #ff8c42; }
+.habilidad-categoria.hobbies:hover    { border-top-color: #9b59b6; }
+
+.tags li:hover {
+    transform: scale(1.1);
+}
+
 /* --- PELÍCULAS --- */
 .contenedor-peliculas {
     display: grid;
@@ -206,6 +223,7 @@ nav ul li a:hover {
     min-width: 0; /* evita que el slider expanda su columna en el grid */
     box-shadow: var(--sombra);
     text-align: center;
+    transition: var(--transicion);
 }
 
 .pelicula-item h3 {
@@ -218,6 +236,10 @@ nav ul li a:hover {
     object-fit: cover;
     border-radius: 4px;
     margin: 1rem 0;
+}
+
+.pelicula-item:hover {
+    transform: scale(1.02);
 }
 
 /* --- SLIDER --- */
