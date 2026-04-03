@@ -155,30 +155,39 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
-/* --- TABLA (Efecto Zebra y Bordes Finos) --- */
-table {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 800px;
-    border-collapse: collapse;    
-    background-color: var(--blanco);
+.habilidades-grid {
+    display: grid;
+    /* Aumentamos el minmax a 250px para que las cajas sean más anchas y equilibradas */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.habilidad-categoria {
+    background: var(--blanco);
+    padding: 2rem; /* Aumentamos el aire interno */
+    border-radius: 12px;
     box-shadow: var(--sombra);
+    text-align: center; /* Centramos el texto para un look más limpio */
+    border-top: 4px solid var(--primario); /* Detalle visual de coherencia */
 }
 
-th, td {
-    padding: 1rem;
-    text-align: left;
-    border: 1px solid #eee;
+.tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 1rem;
 }
 
-th {
-    background-color: var(--primario);
-    color: var(--blanco);
+.tags li {
+    background: #f0f0f0;
+    padding: 0.5rem 0.9rem;
+    border-radius: 5px; /* Un poco más cuadrado para toque técnico */
+    font-size: 0.85rem;
     font-family: 'JetBrains Mono', monospace;
-}
-
-tr:nth-child(even) {
-    background-color: #f9f9f9; /* Efecto Zebra */
+    transition: var(--transicion);
 }
 
 /* --- (GRID - Películas) --- */
@@ -330,8 +339,22 @@ footer {
 }
 
 /* --- RESPONSIVE --- */
+@media (min-width: 1201px) and (max-width: 1400px) {
+    .habilidades-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem; /* Reducimos el espacio entre tarjetas para que entren bien */
+    }
+    
+    .habilidad-categoria {
+        padding: 1.5rem 1rem; /* Ajustamos padding interno */
+    }
+}
+
 @media (max-width: 1200px) {
     .contenedor-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .habilidades-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     .contenedor-peliculas {
@@ -344,6 +367,9 @@ footer {
     .contenedor-grid {
         grid-template-columns: 1fr;
         grid-auto-rows: auto;
+    }
+    .habilidades-grid {
+        grid-template-columns: 1fr;
     }
     .contenedor-peliculas { grid-template-columns: 1fr; }
     .slide img { height: 300px; }
